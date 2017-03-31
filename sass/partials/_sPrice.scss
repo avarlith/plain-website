@@ -1,0 +1,137 @@
+
+.price_list {
+    background-color: #F0F0F0;
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+
+.price_label {
+    width: 329px;
+    height: 650px;
+    position: relative;
+    color: silver;
+
+    &.gray{
+        &::before {
+            @include pseudoCircleBefore (silver, white);
+        }
+        &::after {
+            @include pseudoCircleAfter (silver);
+        }
+    }
+
+    &.turquoise {
+        &::before {
+            @include pseudoCircleBefore (#27c7ab, #27c7ab);
+        }
+        &::after {
+            @include pseudoCircleAfter (#F0F0F0);
+        }
+    }
+
+    &:nth-child(2) {
+        margin-left: 31px;
+        margin-right: 32px;
+    }
+    &:hover {
+        box-shadow: 3px 3px 5px 6px #ccc;
+    }
+}
+
+.gray_border {
+    @include border (silver, #F5F5F5);
+
+    div {
+        &:nth-child(3){
+            @include planOptions(#D2D2D2, 300px);
+        }
+        &:nth-child(4) {
+            @include planOptions(#F0F0F0, 355px);
+        }
+        &:nth-child(5) {
+            @include planOptions(#D2D2D2, 410px);
+        }
+        &:nth-child(6) {
+            @include planOptions(#F0F0F0, 465px);
+        }
+    }
+}
+
+.turquoise_border {
+    @include border (#27c7ab, #27c7ab);
+
+    div {
+        &:nth-child(3){
+            @include planOptions(white, 300px);
+        }
+        &:nth-child(4) {
+            @include planOptions(#F0F0F0, 355px);
+        }
+        &:nth-child(5) {
+            @include planOptions(white, 410px);
+        }
+    }
+}
+
+.price_header {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.price_header.basic {
+    left: 100px;   
+    top: 50px;
+    color: #27c7ab;
+}
+
+.price_header.standard {
+    left: 80px;   
+    top: 50px;
+    color: white;
+}
+
+.price_header.advance {
+    left: 85px;   
+    top: 50px;
+    color: turquoise;
+}
+
+.price_circle {
+    border: 1px solid silver;
+    border-radius: 50% 50%;
+    width: 140px;
+    height: 140px;
+    text-align: center; 
+    background-color: white;
+    position: absolute;
+    top: 120px;
+    left: 95px;
+    padding-top: 10px;
+}
+
+sup {
+    position: absolute;
+    top: 30px;
+    left: 90px;
+}
+
+.join {
+    width: 120px;
+    height: 35px;
+    padding: 05px;
+    border: 2px solid #27c7ab;
+    background-color: #27c7ab;
+    border-radius: 7px;
+    position: absolute;
+    left: 105px;
+    bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+
+    &.white {
+        background-color: white;
+    }
+}
+

@@ -1,0 +1,63 @@
+.chairs {
+    margin-top: 25px;
+    margin-bottom: 75px;
+
+        
+    .row {
+        .col:nth-child(2) {
+            margin-left: 31px;
+            margin-right: 32px;
+        } 
+    }
+}
+
+.block {
+    width: 329px;
+    height: 250px;
+    position: relative;
+    
+    .little_underscore.img {
+        padding: 10px;
+        width: 329px;
+        height: 50px;
+        position: absolute;
+        top: 160px;
+        background-color: rgba(255, 255, 255, 0.3);
+
+        &::after {
+            content: "";
+            height: 5px;
+            width: 140px;
+            border: 1px solid #27c7ab;
+            background-color: #27c7ab;
+            display: block;
+            clear: both;
+        }
+    }
+}
+
+
+.field_wrapper_chairs {
+    width: 100%;
+    padding: 25px;
+    border: 1px solid silver;
+    height: 260px;
+        
+    .little_underscore::after {
+        content: "";
+        height: 5px;
+        width: 140px;
+        border: 1px solid #27c7ab;
+        background-color: #27c7ab;
+        display: block;
+        clear: both;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+}
+
+
+
